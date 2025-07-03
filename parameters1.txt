@@ -1,0 +1,42 @@
+#Total timesteps = Substeps * Outsteps
+NUM_TIME_SUBSTEPS = 50
+NUM_OUTSTEPS = 10
+#How often to print a simple status to terminal (without dumping all data)
+FREQ_TERMINAL = 10
+
+ORDER = 3
+ELEMENT_WIDTH = .125 .125 .125
+STARTING_CORNER = -1.0 -1.0 -1.0
+DT = 0.000001
+C0 = 1500.0
+DIFF_CONST = 5.0
+RHO0 = 1000.0
+B_OVER_A = 5.0
+
+NUM_ELEMENTS = 8 8 16
+NUM_BLOCKS = 2 2 1
+#Turn off certain operators to save time and for debugging
+EVALUATE_SPONGE = 1
+EVALUATE_ADVECTION = 1
+EVALUATE_DIFFUSION = 1
+
+BC_IS_PERIODIC = 0 0 0
+
+#Sponge layer parameters
+BC_SIGMA_MAX = 15000
+#directions are -X, +X, -Y, +Y, -Z, +Z
+BC_SPONGE_WIDTH = 1 1 1 1 1 1
+
+#initial conditions (set IC_X_GAUSS=IC_Y_GAUSS=IC_Z_GAUSS=0 to disable)
+IC_X_GAUSS = 1
+IC_Y_GAUSS = 1
+IC_Z_GAUSS = 1
+IC_DRHO_AMPLITUDE = 1.0
+#for one way motion, vel = drho * c0/rho0
+IC_VX_AMPLITUDE = 0.0
+IC_VY_AMPLITUDE = 0.0
+IC_VZ_AMPLITUDE = 0.0
+IC_SIGMA = 40.
+IC_CENTER_X = 0.
+IC_CENTER_Y = 0.
+IC_CENTER_Z = 0.
